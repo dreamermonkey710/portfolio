@@ -322,10 +322,11 @@ function animateCounter(el) {
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
 })();
 
-// ===== VIDEO MODAL (Google Drive) =====
+// ===== VIDEO MODAL =====
 (function initVideoModal() {
   const modal = document.getElementById('video-modal');
   const iframe = document.getElementById('video-modal-iframe');
+  const player = document.getElementById('video-modal-player');
   const closeBtn = document.getElementById('video-modal-close');
 
   if (!modal) return;
@@ -334,7 +335,16 @@ function animateCounter(el) {
     item.addEventListener('click', () => {
       const videoUrl = item.dataset.video;
       if (!videoUrl) return;
-      iframe.src = videoUrl;
+      if (player && /\.(mp4|webm|ogg)(\?.*)?$/i.test(videoUrl)) {
+        if (iframe) { iframe.style.display = 'none'; iframe.src = ''; }
+        player.style.display = 'block';
+        player.src = videoUrl;
+        player.play().catch(() => {});
+      } else if (iframe) {
+        if (player) { player.pause(); player.style.display = 'none'; player.src = ''; }
+        iframe.style.display = 'block';
+        iframe.src = videoUrl;
+      }
       modal.classList.add('open');
       document.body.style.overflow = 'hidden';
     });
@@ -347,7 +357,13 @@ function animateCounter(el) {
   function closeModal() {
     modal.classList.remove('open');
     document.body.style.overflow = '';
-    setTimeout(() => { iframe.src = ''; }, 400);
+    if (player) {
+      player.pause();
+    }
+    setTimeout(() => {
+      if (iframe) iframe.src = '';
+      if (player) player.src = '';
+    }, 400);
   }
 
   closeBtn?.addEventListener('click', closeModal);

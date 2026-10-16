@@ -55,7 +55,8 @@
   <div id="video-modal" role="dialog" aria-modal="true" aria-label="Video player">
     <div class="video-modal-inner">
       <button class="video-modal-close" id="video-modal-close" aria-label="Close video">&#10005;</button>
-      <iframe id="video-modal-iframe" src="" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      <video id="video-modal-player" controls playsinline style="width:100%;height:100%;display:none;background:#000;outline:none;"></video>
+      <iframe id="video-modal-iframe" src="" allow="autoplay; fullscreen" allowfullscreen style="display:none;"></iframe>
     </div>
   </div>
 
@@ -353,11 +354,11 @@
 
       <div class="portfolio-grid" id="portfolio-grid">
 
-        <div class="portfolio-item reveal" data-category="portrait" data-src="images/portrait/Anhfixeddj.jpg" tabindex="0" role="button" aria-label="Photo 1">
+        <div class="portfolio-item wide reveal" data-category="portrait" data-src="images/portrait/Anhfixeddj.jpg" tabindex="0" role="button" aria-label="Photo 1">
           <img src="images/portrait/Anhfixeddj.jpg" alt="Chân dung by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Chân dung</span><h3 class="portfolio-name">Tác phẩm 1</h3></div>
         </div>
-        <div class="portfolio-item reveal" data-category="portrait" data-src="images/portrait/IMG_0257.jpg" tabindex="0" role="button" aria-label="Photo 2">
+        <div class="portfolio-item wide reveal" data-category="portrait" data-src="images/portrait/IMG_0257.jpg" tabindex="0" role="button" aria-label="Photo 2">
           <img src="images/portrait/IMG_0257.jpg" alt="Chân dung by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Chân dung</span><h3 class="portfolio-name">Tác phẩm 2</h3></div>
         </div>
@@ -365,7 +366,7 @@
           <img src="images/portrait/mauNham3.1.jpg" alt="Chân dung by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Chân dung</span><h3 class="portfolio-name">Tác phẩm 3</h3></div>
         </div>
-        <div class="portfolio-item reveal" data-category="portrait" data-src="images/portrait/NhuY1.jpg" tabindex="0" role="button" aria-label="Photo 4">
+        <div class="portfolio-item wide reveal" data-category="portrait" data-src="images/portrait/NhuY1.jpg" tabindex="0" role="button" aria-label="Photo 4">
           <img src="images/portrait/NhuY1.jpg" alt="Chân dung by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Chân dung</span><h3 class="portfolio-name">Tác phẩm 4</h3></div>
         </div>
@@ -373,15 +374,15 @@
           <img src="images/portrait/NhuY10.jpg" alt="Chân dung by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Chân dung</span><h3 class="portfolio-name">Tác phẩm 5</h3></div>
         </div>
-        <div class="portfolio-item reveal" data-category="portrait" data-src="images/portrait/NhuY11.jpg" tabindex="0" role="button" aria-label="Photo 6">
+        <div class="portfolio-item wide reveal" data-category="portrait" data-src="images/portrait/NhuY11.jpg" tabindex="0" role="button" aria-label="Photo 6">
           <img src="images/portrait/NhuY11.jpg" alt="Chân dung by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Chân dung</span><h3 class="portfolio-name">Tác phẩm 6</h3></div>
         </div>
-        <div class="portfolio-item wide reveal" data-category="portrait" data-src="images/portrait/NhuY12.jpg" tabindex="0" role="button" aria-label="Photo 7">
+        <div class="portfolio-item reveal" data-category="portrait" data-src="images/portrait/NhuY12.jpg" tabindex="0" role="button" aria-label="Photo 7">
           <img src="images/portrait/NhuY12.jpg" alt="Chân dung by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Chân dung</span><h3 class="portfolio-name">Tác phẩm 7</h3></div>
         </div>
-        <div class="portfolio-item wide reveal" data-category="portrait" data-src="images/portrait/NhuY13.jpg" tabindex="0" role="button" aria-label="Photo 8">
+        <div class="portfolio-item reveal" data-category="portrait" data-src="images/portrait/NhuY13.jpg" tabindex="0" role="button" aria-label="Photo 8">
           <img src="images/portrait/NhuY13.jpg" alt="Chân dung by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Chân dung</span><h3 class="portfolio-name">Tác phẩm 8</h3></div>
         </div>
@@ -389,7 +390,7 @@
           <img src="images/portrait/NhuY14.jpg" alt="Chân dung by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Chân dung</span><h3 class="portfolio-name">Tác phẩm 9</h3></div>
         </div>
-        <div class="portfolio-item reveal" data-category="portrait" data-src="images/portrait/NhuY15.jpg" tabindex="0" role="button" aria-label="Photo 10">
+        <div class="portfolio-item wide reveal" data-category="portrait" data-src="images/portrait/NhuY15.jpg" tabindex="0" role="button" aria-label="Photo 10">
           <img src="images/portrait/NhuY15.jpg" alt="Chân dung by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Chân dung</span><h3 class="portfolio-name">Tác phẩm 10</h3></div>
         </div>
@@ -417,7 +418,7 @@
           <img src="images/portrait/NhuY3.jpg" alt="Chân dung by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Chân dung</span><h3 class="portfolio-name">Tác phẩm 16</h3></div>
         </div>
-        <div class="portfolio-item wide reveal" data-category="portrait" data-src="images/portrait/NhuY4.jpg" tabindex="0" role="button" aria-label="Photo 17">
+        <div class="portfolio-item reveal" data-category="portrait" data-src="images/portrait/NhuY4.jpg" tabindex="0" role="button" aria-label="Photo 17">
           <img src="images/portrait/NhuY4.jpg" alt="Chân dung by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Chân dung</span><h3 class="portfolio-name">Tác phẩm 17</h3></div>
         </div>
@@ -425,7 +426,7 @@
           <img src="images/portrait/NhuY5.jpg" alt="Chân dung by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Chân dung</span><h3 class="portfolio-name">Tác phẩm 18</h3></div>
         </div>
-        <div class="portfolio-item reveal" data-category="portrait" data-src="images/portrait/NhuY6.jpg" tabindex="0" role="button" aria-label="Photo 19">
+        <div class="portfolio-item wide reveal" data-category="portrait" data-src="images/portrait/NhuY6.jpg" tabindex="0" role="button" aria-label="Photo 19">
           <img src="images/portrait/NhuY6.jpg" alt="Chân dung by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Chân dung</span><h3 class="portfolio-name">Tác phẩm 19</h3></div>
         </div>
@@ -445,11 +446,11 @@
           <img src="images/wedding/DamCuoi-10.jpg" alt="Đám cưới by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Đám cưới</span><h3 class="portfolio-name">Tác phẩm 23</h3></div>
         </div>
-        <div class="portfolio-item wide reveal" data-category="wedding" data-src="images/wedding/DamCuoi-11.jpg" tabindex="0" role="button" aria-label="Photo 24">
+        <div class="portfolio-item reveal" data-category="wedding" data-src="images/wedding/DamCuoi-11.jpg" tabindex="0" role="button" aria-label="Photo 24">
           <img src="images/wedding/DamCuoi-11.jpg" alt="Đám cưới by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Đám cưới</span><h3 class="portfolio-name">Tác phẩm 24</h3></div>
         </div>
-        <div class="portfolio-item reveal" data-category="wedding" data-src="images/wedding/DamCuoi-12.jpg" tabindex="0" role="button" aria-label="Photo 25">
+        <div class="portfolio-item wide reveal" data-category="wedding" data-src="images/wedding/DamCuoi-12.jpg" tabindex="0" role="button" aria-label="Photo 25">
           <img src="images/wedding/DamCuoi-12.jpg" alt="Đám cưới by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Đám cưới</span><h3 class="portfolio-name">Tác phẩm 25</h3></div>
         </div>
@@ -469,7 +470,7 @@
           <img src="images/wedding/DamCuoi-3.jpg" alt="Đám cưới by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Đám cưới</span><h3 class="portfolio-name">Tác phẩm 29</h3></div>
         </div>
-        <div class="portfolio-item wide reveal" data-category="wedding" data-src="images/wedding/DamCuoi-4.jpg" tabindex="0" role="button" aria-label="Photo 30">
+        <div class="portfolio-item reveal" data-category="wedding" data-src="images/wedding/DamCuoi-4.jpg" tabindex="0" role="button" aria-label="Photo 30">
           <img src="images/wedding/DamCuoi-4.jpg" alt="Đám cưới by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Đám cưới</span><h3 class="portfolio-name">Tác phẩm 30</h3></div>
         </div>
@@ -489,7 +490,7 @@
           <img src="images/wedding/DamCuoi-8.jpg" alt="Đám cưới by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Đám cưới</span><h3 class="portfolio-name">Tác phẩm 34</h3></div>
         </div>
-        <div class="portfolio-item reveal" data-category="wedding" data-src="images/wedding/DamCuoi-9.jpg" tabindex="0" role="button" aria-label="Photo 35">
+        <div class="portfolio-item wide reveal" data-category="wedding" data-src="images/wedding/DamCuoi-9.jpg" tabindex="0" role="button" aria-label="Photo 35">
           <img src="images/wedding/DamCuoi-9.jpg" alt="Đám cưới by Phạm Minh Lộc" loading="lazy" />
           <div class="portfolio-overlay"><span class="portfolio-tag">Đám cưới</span><h3 class="portfolio-name">Tác phẩm 35</h3></div>
         </div>
@@ -550,7 +551,7 @@
           <div class="portfolio-overlay"><span class="portfolio-tag">Video Edit</span><h3 class="portfolio-name">Edit 05</h3></div>
           <div class="portfolio-video-btn" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         </div>
-        <div class="portfolio-item video-item reveal" data-category="video" data-video="images/YeeTea5_11.12.2025.mp4" tabindex="0" role="button" aria-label="Video 6">
+        <div class="portfolio-item video-item wide reveal" data-category="video" data-video="images/YeeTea5_11.12.2025.mp4" tabindex="0" role="button" aria-label="Video 6">
           <video src="images/YeeTea5_11.12.2025.mp4" preload="metadata" muted playsinline style="width:100%;height:100%;object-fit:cover;pointer-events:none;" tabindex="-1"></video>
           <div class="portfolio-overlay"><span class="portfolio-tag">Video Edit</span><h3 class="portfolio-name">Edit 06</h3></div>
           <div class="portfolio-video-btn" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
@@ -558,9 +559,8 @@
       </div>
     </div>
   </section>
-    </div>
-  </section>
-</section>
+
+
 
   <!-- MY PROCESS -->
   <section id="process" aria-label="My Process" style="padding:8rem 0; background: var(--dark);">

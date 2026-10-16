@@ -1,4 +1,4 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 
 const indexHtmlPath = 'd:/Portfolio/index.html';
@@ -9,6 +9,10 @@ let indexHtml = fs.readFileSync(indexHtmlPath, 'utf8');
 // Update profile image to Loc2.jpg
 indexHtml = indexHtml.replace(/<img src="images\/Loc1\.jpg"([^>]+)>/, '<img src="images/Loc2.jpg"$1>');
 indexHtml = indexHtml.replace(/<img src="images\/LOC\.png"([^>]+)>/, '<img src="images/Loc2.jpg"$1>');
+indexHtml = indexHtml.replace(
+  '<iframe id="video-modal-iframe" src="" allow="autoplay; fullscreen" allowfullscreen></iframe>',
+  '<video id="video-modal-player" controls playsinline style="width:100%;height:100%;display:none;background:#000;outline:none;"></video>\n      <iframe id="video-modal-iframe" src="" allow="autoplay; fullscreen" allowfullscreen style="display:none;"></iframe>'
+);
 
 // Generate Portfolio Grid
 let newGrid = '';
@@ -50,7 +54,7 @@ for (const file of videoFiles) {
     vCounter++;
 }
 
-indexHtml = indexHtml.replace(/<div class="portfolio-grid" id="portfolio-grid">[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/, `<div class="portfolio-grid" id="portfolio-grid">\n${newGrid}\n      </div>\n    </div>\n  </section>`);
+indexHtml = indexHtml.replace(/<div class="portfolio-grid" id="portfolio-grid">[\s\S]*?(?=\s*<!-- MY PROCESS -->)/, `<div class="portfolio-grid" id="portfolio-grid">\n${newGrid}\n      </div>\n    </div>\n  </section>\n`);
 
 fs.writeFileSync(indexHtmlPath, indexHtml, 'utf8');
 console.log('Successfully updated grid and profile image!');
